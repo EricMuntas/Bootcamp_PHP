@@ -1,0 +1,22 @@
+body {
+    background-color: bisque;
+}
+
+.title {
+    color: red;
+}
+
+.title:hover {
+    color: yellowgreen;
+}
+
+.columns {
+    column-count: 3;
+    column-gap: 40px;
+    column-rule: 2px solid red;
+}
+
+::selection {
+    background: #FF0099;
+    color: orange;
+}

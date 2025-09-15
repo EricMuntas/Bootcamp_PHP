@@ -1,0 +1,40 @@
+table {
+ 
+  text-align: center;
+  margin: 1px;
+}
+
+td {
+  padding: 0px 10px 0px 10px;
+  border-bottom: 2px solid black;
+  border-left: 1px solid black;
+}
+
+.container {
+  border: 5px solid rgb(71, 60, 60);
+  border-radius: 20px 20px 0px 0px;
+  width: fit-content;
+  background-color: bisque;
+}
+th {
+  padding-top: 10px;
+}
+
+tfoot {
+  background-color: rgb(55, 205, 255);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  background-color: rgb(55, 205, 255);
+  margin: 0px;
+}
+
+.footer td {
+    border: none !important ;
+}

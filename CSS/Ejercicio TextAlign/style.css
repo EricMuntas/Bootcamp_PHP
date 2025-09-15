@@ -1,0 +1,28 @@
+* {
+    background-color: bisque;
+}
+
+.container {
+    margin:auto
+}
+
+.container div {
+    width: 200px;
+    border: 2px solid black;
+    margin: auto;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    background-color: rgb(200, 200, 200);
+}
+
+#left {
+    text-align: left;
+}   
+#center {
+    text-align: center;
+}
+#right {
+    text-align: right;
+}
