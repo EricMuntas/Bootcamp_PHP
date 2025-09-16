@@ -1,0 +1,51 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: red;
+  width: 400px;
+  height: 400px;
+  border: 2px solid black;
+}
+.circle {
+  background-color: yellowgreen;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ 
+.position1 {
+  position: relative;
+  top: -25px;
+  right: 25px;
+}
+.position2 {
+  position: relative;
+  top: -75px;
+  left: 375px;
+}
+.position3 {
+  position: relative;
+  right: 25px;
+  top: 265px;
+}
+
+.position4 {
+  position: relative;
+  top: 210px;
+  left: 375px;
+}
