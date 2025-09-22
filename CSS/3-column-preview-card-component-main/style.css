@@ -1,0 +1,92 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0px;
+  padding: 0px;
+  font-size: 15px;
+}
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  width: 250px;
+  height: 400px;
+}
+section div {
+  margin: 30px;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-weight: 400;
+}
+h2 {
+  color: hsl(0, 0%, 95%);
+  font-weight: 700;
+  font-size: xx-large;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.btn {
+  margin-top: 25px;
+  background-color: hsl(0, 0%, 95%);
+  width: 150px;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-s1 {
+  color: hsl(31, 77%, 52%);
+}
+.btn-s2 {
+  color: hsl(184, 100%, 22%);
+}
+.btn-s3 {
+  color: hsl(179, 100%, 13%);
+}
+
+.btn:hover {
+  background-color: transparent;
+  border: 2px solid hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+}
+
+.section-1 {
+  background-color: hsl(31, 77%, 52%);
+}
+
+.section-2 {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.section-3 {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.attribution {
+  margin-top: 20px;
+}
+
+@media (max-width: 375px) {
+  .container {
+    flex-direction: column;
+  }
+}
