@@ -24,7 +24,6 @@ function clickBtn() {
 
   if (BUTTON_VALUE == "DEL") {
     operation.splice(operation.length - 1);
-    console.log(operation.length);
 
     if (operation[0] == undefined) {
       result_screen.textContent = "0";
@@ -57,22 +56,24 @@ function clickBtn() {
     return;
   }
 
-if (BUTTON_VALUE === ".") {
-  if (operation.length === 0) {
-    operation.push("0"); // empezamos con "0."
-  }
+  if (BUTTON_VALUE === ".") {
+    if (operation.length === 0) {
+      operation.push("0"); // empezamos con "0."
+    }
 
-  if (!canAddDecimal()) {
-    return; // ya hay un punto decimal en este número
+    if (!canAddDecimal()) {
+      return; // ya hay un punto decimal en este número
+    }
   }
-}
-
 
   if (BUTTON_VALUE == "=") {
+    if (operation.length > 0) {
+      calculateOperation();
+    }
+
     return;
   }
 
-  console.log(operation);
   operation.push(BUTTON_VALUE);
   printResult();
 }
@@ -93,4 +94,85 @@ function canAddDecimal() {
     }
   }
   return true;
+}
+
+function calculateOperation() {
+  let groupNumbers = [];
+  let numbers = "";
+  for (let index = 0; index < operation.length; index++) {
+    if (["+", "-", "x", "/"].includes(operation[index])) {
+      groupNumbers.push(numbers);
+      groupNumbers.push(operation[index]);
+
+      numbers = "";
+    } else {
+      numbers = numbers + operation[index];
+      // console.log('Lenght: ' + operation.length+" / Index: " +index)
+      if (index + 1 == operation.length) {
+        groupNumbers.push(numbers);
+      }
+    }
+  }
+
+  // Primero multiplicaciones y divisiones
+  for (let index = 0; index < groupNumbers.length; index++) {
+    let newOperation = "";
+    if (
+      ["x", "/"].includes(groupNumbers[index]) &&
+      index + 1 != operation.length
+    ) {
+      console.log(index);
+      console.log(groupNumbers[index]);
+      if (groupNumbers[index] == "x") {
+        newOperation = groupNumbers[index - 1] * groupNumbers[index + 1] + "";
+        // groupNumbers.splice(index - 1, 3, newOperation);
+      }
+
+      if (groupNumbers[index] == "/") {
+        newOperation = groupNumbers[index - 1] / groupNumbers[index + 1] + "";
+        // groupNumbers.splice(index - 1, 3, newOperation);
+      }
+
+      groupNumbers.splice(index - 1, 3, newOperation);
+      index--;
+      newOperation = "";
+    }
+  }
+
+  for (let index = 0; index < groupNumbers.length; index++) {
+    let newOperation = "";
+    if (
+      ["+", "-"].includes(groupNumbers[index]) &&
+      index + 1 != operation.length
+    ) {
+      console.log(index);
+      console.log(groupNumbers[index]);
+      if (groupNumbers[index] == "+") {
+        newOperation =
+          parseFloat(groupNumbers[index - 1]) +
+          parseFloat(groupNumbers[index + 1]) +
+          "";
+        // groupNumbers.splice(index - 1, 3, newOperation);
+      }
+
+      if (groupNumbers[index] == "-") {
+        newOperation =
+          parseFloat(groupNumbers[index - 1]) -
+          parseFloat(groupNumbers[index + 1]) +
+          "";
+        // groupNumbers.splice(index - 1, 3, newOperation);
+      }
+
+      groupNumbers.splice(index - 1, 3, newOperation);
+      index--;
+      newOperation = "";
+    }
+  }
+
+  // var calc = parseFloat((groupNumbers.toString()).replaceAll(',',''));
+  // console.log(calc)
+  console.log(groupNumbers);
+
+  operation = groupNumbers;
+  printResult();
 }

@@ -79,9 +79,9 @@ background-color: white;
   color: white !important;
 }
 
-.reset-btn:hover {
+.reset-btn:hover, .delete-btn:hover {
 
-    background-color: hsl(225, 21%, 49%) !important;
+    background-color: hsl(223.81deg 51.22% 75.88%) !important;
 
 }
 
@@ -92,6 +92,12 @@ background-color: white;
   border-color: hsl(6, 70%, 34%) !important;
   color: white !important;
 }
+
+.equals-btn:hover {
+  background-color: hsl(6.46deg 92.94% 66.67%) !important;
+}
+
+
 
 .delete-btn {
   background-color: hsl(225, 21%, 49%) !important;
