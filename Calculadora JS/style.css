@@ -6,12 +6,12 @@
 }
 body {
   overflow: hidden;
+  height: 100vh;
 }
 
-.theme-1 {
-  background-color: hsl(222, 26%, 31%);
-  color: white;
-  height: 100vh;
+.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
 }
 
 .container {
@@ -33,7 +33,6 @@ body {
   border-radius: 10px;
   padding: 10px 20px; /* controlado */
   text-align: end;
-  background-color: hsl(224, 36%, 15%);
   margin-bottom: 20px;
   height: 50px; /* altura fija */
   display: flex;
@@ -44,7 +43,6 @@ body {
 .button-grid {
   padding: 20px;
   border-radius: 10px;
-  background-color: hsl(223, 31%, 20%);
   height: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -57,8 +55,6 @@ body {
   color: hsl(221, 14%, 31%);
   width: 80px;
   height: 50px;
-  background-color: hsl(0, 0%, 90%);
-  border-bottom: 4px solid hsl(28, 16%, 65%);
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -66,43 +62,15 @@ body {
   cursor: pointer;
 }
 
-.button-grid div:hover {
-background-color: white;
-}
-
 .reset-btn {
   grid-column: 1 / 2 span;
   width: 180px !important;
   height: 50px;
-  background-color: hsl(225, 21%, 49%) !important;
-  border-color: hsl(224, 28%, 35%) !important;
-  color: white !important;
-}
-
-.reset-btn:hover, .delete-btn:hover {
-
-    background-color: hsl(223.81deg 51.22% 75.88%) !important;
-
 }
 
 .equals-btn {
   grid-column: 3 / 2 span;
   width: 180px !important;
-  background-color: hsl(6, 63%, 50%) !important;
-  border-color: hsl(6, 70%, 34%) !important;
-  color: white !important;
-}
-
-.equals-btn:hover {
-  background-color: hsl(6.46deg 92.94% 66.67%) !important;
-}
-
-
-
-.delete-btn {
-  background-color: hsl(225, 21%, 49%) !important;
-  border-color: hsl(224, 28%, 35%) !important;
-  color: white !important;
 }
 
 .attribution {
@@ -111,4 +79,212 @@ background-color: white;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+.switch {
+  width: 50px;
+  height: 20px;
+  border-radius: 50px;
+  display: flex;
+  padding: 0px 5px 0px 5px;
+  align-items: center;
+  cursor: pointer;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-selector {
+  display: flex;
+  justify-content: space-around;
+}
+.theme-selector div {
+  font-size: 15px;
+}
+
+.theme-title {
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+/*THEME 1*/
+body.theme-1 {
+  background-color: hsl(222, 26%, 31%);
+  color: white;
+}
+
+body.theme-1 .result-screen {
+  background-color: hsl(224, 36%, 15%);
+}
+
+body.theme-1 .button-grid {
+  background-color: hsl(223, 31%, 20%);
+}
+
+body.theme-1 .button-grid div {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: 4px solid hsl(28, 16%, 65%);
+}
+body.theme-1 .button-grid div:hover {
+  background-color: white;
+}
+
+body.theme-1 .reset-btn {
+  background-color: hsl(225, 21%, 49%) !important;
+  border-color: hsl(224, 28%, 35%) !important;
+  color: white !important;
+}
+
+body.theme-1 .reset-btn:hover,
+.delete-btn:hover {
+  background-color: hsl(223.81deg 51.22% 75.88%) !important;
+}
+
+body.theme-1 .equals-btn {
+  background-color: hsl(6, 63%, 50%) !important;
+  border-color: hsl(6, 70%, 34%) !important;
+  color: white !important;
+}
+
+body.theme-1 .equals-btn:hover {
+  background-color: hsl(6.46deg 92.94% 66.67%) !important;
+}
+
+body.theme-1 .delete-btn {
+  background-color: hsl(225, 21%, 49%) !important;
+  border-color: hsl(224, 28%, 35%) !important;
+  color: white !important;
+}
+
+body.theme-1 .switch {
+  background-color: hsl(224, 36%, 15%);
+}
+
+body.theme-1 .circle {
+  background-color: hsl(6, 63%, 50%);
+  transform: translateX(0); /* posición inicial */
+}
+body.theme-1 .switch:hover .circle {
+  background-color: hsl(6.46deg 92.94% 66.67%) !important;
+}
+
+/*THEME 2*/
+
+body.theme-2 {
+  background-color: hsl(0, 0%, 90%);
+  color: hsl(60, 10%, 19%);
+}
+
+body.theme-2 .result-screen {
+  background-color: hsl(0, 0%, 93%);
+}
+
+body.theme-2 .button-grid {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.theme-2 .button-grid div {
+  background-color: hsl(0, 0%, 90%);
+  border-bottom: 4px solid hsl(28, 16%, 65%);
+}
+body.theme-2 .button-grid div:hover {
+  background-color: white;
+}
+
+body.theme-2 .reset-btn,
+body.theme-2 .delete-btn {
+  background-color: hsl(185, 42%, 37%) !important;
+  border-color: hsl(185, 58%, 25%) !important;
+  color: white !important;
+}
+
+body.theme-2 .reset-btn:hover,
+body.theme-2 .delete-btn:hover {
+  background-color: hsl(223.81deg 51.22% 75.88%) !important;
+}
+
+body.theme-2 .equals-btn {
+  background-color: hsl(25, 98%, 40%) !important;
+  border-color: hsl(25, 99%, 27%) !important;
+  color: white !important;
+}
+
+body.theme-2 .equals-btn:hover {
+  background-color: hsl(6.46deg 92.94% 66.67%) !important;
+}
+
+body.theme-2 .switch {
+  background-color: hsl(0, 5%, 81%);
+}
+
+body.theme-2 .circle {
+  background-color: hsl(25, 98%, 40%);
+  transform: translateX(20px); /* posición inicial */
+}
+body.theme-2 .switch:hover .circle {
+  background-color: hsl(25, 99%, 27%) !important;
+}
+
+/*THEME 3*/
+
+body.theme-3 {
+  background-color: hsl(268, 75%, 9%);
+  color: hsl(52, 100%, 62%);
+}
+
+body.theme-3 .result-screen {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-3 .button-grid {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-3 .button-grid div {
+  background-color: hsl(281, 89%, 26%);
+  border-bottom: 4px solid hsl(285, 91%, 52%);
+  color: hsl(52, 100%, 62%);
+}
+body.theme-3 .button-grid div:hover {
+  background-color: white;
+}
+
+body.theme-3 .reset-btn,
+body.theme-3 .delete-btn {
+  background-color: hsl(268, 47%, 21%) !important;
+  border-color: hsl(290, 70%, 36%) !important;
+  color: white !important;
+}
+
+body.theme-3 .reset-btn:hover,
+body.theme-3 .delete-btn:hover {
+  background-color: hsl(223.81deg 51.22% 75.88%) !important;
+}
+
+body.theme-3 .equals-btn {
+  background-color: hsl(176, 100%, 44%) !important;
+  border-color: hsl(177, 92%, 70%) !important;
+  color: white !important;
+}
+
+body.theme-3 .equals-btn:hover {
+  background-color: hsl(6.46deg 92.94% 66.67%) !important;
+}
+
+body.theme-3 .switch {
+  background-color: hsl(268, 71%, 12%);
+}
+
+body.theme-3 .circle {
+  background-color: hsl(176, 100%, 44%);
+  transform: translateX(40px); /* posición inicial */
+}
+body.theme-3 .switch:hover .circle {
+  background-color: hsl(177, 92%, 70%) !important;
 }

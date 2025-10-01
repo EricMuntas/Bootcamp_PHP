@@ -21,12 +21,27 @@
     <script src="main.js"></script>
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   </head>
-  <body class="theme-1">
+  <body class="theme-1" id="body">
     <div class="container">
       <div class="calculadora">
         <div class="header">
           <div>calc</div>
-          <div>THEME</div>
+          <div style="display: flex;"><p class="theme-title">THEME</p>
+            <div style="display: flex; flex-direction: column;">
+
+<div class="theme-selector">
+<div>1</div>
+<div>2</div>
+<div>3</div>
+
+</div>
+<div class="switch" id="switch">
+  <div class="circle"></div>
+</div>
+
+
+            </div>
+          </div>
         </div>
         <div class="result-screen">
           <p id="result">0</p>

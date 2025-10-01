@@ -1,5 +1,7 @@
 var result_screen;
 var operation = [];
+var switchThemBtn; 
+
 
 document.addEventListener("DOMContentLoaded", onLoad);
 
@@ -7,6 +9,12 @@ function onLoad() {
   const spanList = document.querySelectorAll("span");
 
   result_screen = document.getElementById("result");
+
+
+  switchThemBtn = document.getElementById('switch');
+
+  switchThemBtn.addEventListener('click', changeTheme);
+
 
   spanList.forEach((button) => {
     button.parentElement.addEventListener("click", clickBtn);
@@ -175,4 +183,25 @@ function calculateOperation() {
 
   operation = groupNumbers;
   printResult();
+}
+
+
+function changeTheme() {
+const body = document.getElementById('body');
+
+console.log('hola')
+console.log(body)
+if (body.classList.contains('theme-1')) {
+  body.classList.remove('theme-1');
+  body.classList.add('theme-2');
+}
+else if (body.classList.contains('theme-2')) {
+  body.classList.remove('theme-2');
+  body.classList.add('theme-3');
+}
+else if (body.classList.contains('theme-3')) {
+  body.classList.remove('theme-3');
+  body.classList.add('theme-1');
+}
+
 }
