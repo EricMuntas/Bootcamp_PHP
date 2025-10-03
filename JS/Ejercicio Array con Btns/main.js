@@ -16,27 +16,21 @@ document.addEventListener("DOMContentLoaded", onLoad);
 var array = [];
 
 function onLoad() {
-  pushBtn = document
-    .getElementById("push")
-    .addEventListener("click", pushArray);
-  unshiftBtn = document
-    .getElementById("unshift")
-    .addEventListener("click", unshiftArray);
-  insertBtn = document
-    .getElementById("insert")
-    .addEventListener("click", insertArray);
+  pushBtn = document.getElementById("push").addEventListener("click", pushArray);
+  
+  unshiftBtn = document.getElementById("unshift").addEventListener("click", unshiftArray);
+  
+  insertBtn = document.getElementById("insert").addEventListener("click", insertArray);
+
   insertInput = document.getElementById("insert-input");
 
   addInput = document.getElementById("add-input");
 
   popBtn = document.getElementById("pop").addEventListener("click", popArray);
-  shiftBtn = document
-    .getElementById("shift")
-    .addEventListener("click", shiftArray);
+  
+  shiftBtn = document.getElementById("shift").addEventListener("click", shiftArray);
 
-  removeBtn = document
-    .getElementById("remove")
-    .addEventListener("click", removeArray);
+  removeBtn = document.getElementById("remove").addEventListener("click", removeArray);
 
   removeInput = document.getElementById("remove-input");
 
