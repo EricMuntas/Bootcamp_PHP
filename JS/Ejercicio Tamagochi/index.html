@@ -11,53 +11,53 @@
     <div class="grid">
       <div class="flex eat-menu">
         <div class="eat-btns">
-          <button><img src="img/sugar.webp" alt="" /></button>
-          <button><img src="img/carrot.webp" alt="" /></button>
+          <button id="eat-sugar"><img src="img/sugar.webp" alt="" /></button>
+          <button id="eat-carrot"><img src="img/carrot.webp" alt="" /></button>
         </div>
         <div class="bar menu-bar">
-          <div class="bar-fill" id=""></div>
+          <div class="bar-fill" id="fullness-bar"></div>
         </div>
         <div>
-          <p><span id="stat-1"></span>% Full</p>
+          <p><span id="fullness-count"></span>% Full</p>
         </div>
       </div>
       <div class="flex play-menu">
         <div class="play-btns">
-          <button><img src="img/carrot_stick.webp" alt="" /></button>
+          <button id="ride"><img src="img/carrot_stick.webp" alt="" /></button>
         </div>
         <div class="bar menu-bar">
-          <div class="bar-fill" id=""></div>
+          <div class="bar-fill" id="fun-bar"></div>
         </div>
         <div>
-          <p><span id="stat-2"></span>% Fun</p>
+          <p><span id="fun-count"></span>% Fun</p>
         </div>
       </div>
       <div class="flex adventure-menu">
         <div class="eat-btns">
-          <button><img src="img/pickaxe.webp" alt="" /></button>
+          <button id="mine-adventure"><img src="img/pickaxe.webp" alt="" /></button>
         </div>
         <div class="bar menu-bar">
-          <div class="bar-fill" id=""></div>
+          <div class="bar-fill" id="entertainment-bar"></div>
         </div>
         <div>
-          <p><span id="stat-3"></span>% Entertained</p>
+          <p><span id="entertainment-count"></span>% Entertained</p>
         </div>
       </div>
       <div class="flex sleep-menu">
         <div class="eat-btns">
-          <button><img src="img/bed.webp" alt="" /></button>
+          <button id="sleep"><img src="img/bed.webp" alt="" /></button>
         </div>
         <div class="bar menu-bar">
-          <div class="bar-fill" id=""></div>
+          <div class="bar-fill" id="sleep-bar"></div>
         </div>
         <div>
-          <p><span id="stat-4"></span>% Energy</p>
+          <p><span id="sleep-count"></span>% Energy</p>
         </div>
       </div>
     </div>
     <div class="pet-container">
       <div class="pet-stats">
-        <img src="img/pig.webp" alt="" class="pet-img" />
+        <img src="img/pig.webp" alt="" class="pet-img" id="pig" />
         <div class="heart-container">
           <div><img src="img/heart.png" alt="" class="heart"></div>
           <div><img src="img/heart.png" alt="" class="heart"></div>
@@ -66,7 +66,7 @@
         <div class="bar">
           <div class="bar-fill" id="happiness-bar"></div>
         </div>
-        <p>Happiness <span id="happines_count">100</span>%</p>
+        <p>Happiness <span id="happines-count">100</span>%</p>
       </div>
     </div>
   </body>
