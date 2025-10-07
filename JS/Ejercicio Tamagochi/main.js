@@ -9,8 +9,6 @@ function onLoad() {
 
   pig = document.getElementById('pig');
 
-  health_container = document.getElementsByClassName('heart');
-
   /*STATS*/
   // Happiness
   const HAPPINESS_BAR = document.getElementById("happiness-bar");

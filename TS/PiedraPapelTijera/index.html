@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="../../ts-output/main.js"></script>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0px;
+            padding: 0px;
+            text-align: center;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            flex-direction: column;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Tu mano:</h2>
+        <button type="button" id="piedra">Piedra</button>
+        <button type="button" id="papel">Papel</button>
+        <button type="button" id="tijera">Tijera</button>
+    </div>
+    <div>
+        <h2 id="batalla"></h2>
+        <h1 id="mensaje-final"></h1>
+    </div>
+</body>
+
+</html>
