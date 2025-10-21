@@ -10,6 +10,7 @@ function onLoad(): void {
 
     questionArray.forEach(question => {
         let newQuestionDiv : HTMLElement = document.createElement('div');
+        
     });
     
 
